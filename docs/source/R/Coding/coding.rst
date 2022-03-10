@@ -173,7 +173,7 @@ To amuse myself, we will continue with the Formula 1 and create a **named list**
     F1_teams <- list(Scuderia_Ferrari=c("Charles Leclerc", "Carlos Sainz"),
                      Scuderia_Alpha_Tauri_Honda=c("Pierre Gasly", "Yuki Tsunoda"),
                      Alfa_Romeo_Racing_ORLEN=c("Valterri Bottas", "Guanyu Zhou"),
-                     URALKALI_HASS_F1_Team=c("Mick Schumacher", "Nikita Mazepin"))
+                     HASS_F1_Team=c("Mick Schumacher", "Kevin Magnussen"))
 
 Constructing a list is simple - just assign multiple vectors (e.g ``Scuderia_Ferrari=c("Charles Leclerc", "Carlos Sainz")`` - each separated by a comma. 
 

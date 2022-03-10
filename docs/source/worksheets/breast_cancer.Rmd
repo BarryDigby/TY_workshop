@@ -1,8 +1,10 @@
 ---
-title: "Breat_cancer_analysis"
+title: "Breast_cancer_analysis"
 author: "Barry"
 date: "2/3/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ## Intro
@@ -19,6 +21,7 @@ We are going to use scatterplots to analyse 3 subtypes of breast cancer:
 We have a dataset with 150 patients, 50 for each subtype. Load the dataset below:
 
 ```{r}
+library(ggpubr)
 dataset <- read.delim("https://raw.githubusercontent.com/BarryDigby/TY_workshop/master/docs/source/worksheets/genes.txt", sep=" ", header=T)
 ```
 
@@ -46,6 +49,12 @@ Run the code block below to visualise this threshold:
 ggscatter(dataset, x="ESR1", y="PGR", color="subtype", ellipse = T) + geom_hline(yintercept=2.2, color="red", linetype=2)
 ```
 
+Finally, customaise your plot with appropriate labels
+
+```{r}
+ggscatter(dataset, x="ESR1", y="PGR", color="subtype", ellipse = T, title = "Breast Cancer Subtype Analysis", xlab = "ESR1 Expression", ylab="PGR Expression", legend = "right", legend.title = "Subtype Categories", ggtheme = theme_bw())
+```
+
 ## Exercise 1
 
 Research states that luminal A breast cancers are HER2 negative and luminal B cancers are HER2 positive. This means we expect HER2 expression to be higher in luminal B when compared to luminal A patients. 
@@ -57,6 +66,8 @@ Can we see luminal A patients separate from luminal B patients according to `HER
 ```{R}
 ggscatter(dataset, x="HER2", y="PGR")
 ```
+
+
 
 ## Exercise 2
 

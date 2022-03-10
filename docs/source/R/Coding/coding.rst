@@ -191,11 +191,11 @@ These all achieve the same result. If you want to find out who the number 2 driv
 
 .. code-block:: R
 
-    F1_teams$URALKALI_HASS_F1_Team[2]
+    F1_teams$HASS_F1_Team[2]
 
 .. code-block:: R
 
-    "Nikita Mazepin"
+    "Kevin Magnussen"
 
 Dataframes
 ==========
